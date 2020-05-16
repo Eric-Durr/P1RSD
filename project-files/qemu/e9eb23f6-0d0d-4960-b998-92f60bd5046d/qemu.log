@@ -1,0 +1,5 @@
+Start QEMU with /usr/bin/qemu-system-x86_64 -name PC-1 -m 96M -smp cpus=1 -enable-kvm -machine smm=off -boot order=c -drive file=/home/eric/Descargas/pr1_dir/project-files/qemu/e9eb23f6-0d0d-4960-b998-92f60bd5046d/hda_disk.qcow2,if=ide,index=0,media=disk,id=drive0 -uuid e9eb23f6-0d0d-4960-b998-92f60bd5046d -serial telnet:127.0.0.1:5003,server,nowait -monitor tcp:127.0.0.1:46397,server,nowait -net none -device virtio-net-pci,mac=0c:db:c8:96:d8:00,netdev=gns3-0 -netdev socket,id=gns3-0,udp=127.0.0.1:10057,localaddr=127.0.0.1:10056 -nographic
+
+Execution log:
+qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.svm [bit 2]
+qemu-system-x86_64: terminating on signal 15 from pid 2370 (/usr/share/gns3/gns3-server/bin/python)
